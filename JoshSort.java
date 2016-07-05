@@ -115,8 +115,6 @@ public class JoshSort {
             if (sortedNums == 2 && sortedNumsIndex < highValue)
             {
                 sortedNums = given2Sort3(lowValue, sortedNums);
-                // Recheck for more sorted
-                sortedNums = sortedNums(lowValue, highValue, sortedNums);
             }
         }
 
