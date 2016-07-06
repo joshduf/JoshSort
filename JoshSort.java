@@ -268,7 +268,7 @@ public class JoshSort {
         // Get insertion point and make known moves
         if (compare(toSort[startValue], toSort[midValue + 1]) <= 0)
         {
-            insertPoint = getInsertGreater(midValue + 1, startValue, midValue);
+            insertPoint = getInsertGreater(midValue + 1, startValue + 1, midValue);
             lowerIndex = insertPoint;
             tempSort[startValue] = toSort[midValue + 1];
             tempIndex++;
@@ -276,7 +276,14 @@ public class JoshSort {
         }
         else
         {
-            insertPoint = getInsertGreaterEqual(startValue, midValue + 1, highValue);
+            if (midValue + 2 == highValue)
+            {
+                insertPoint = highValue;
+            }
+            else
+            {
+                insertPoint = getInsertGreaterEqual(startValue, midValue + 2, highValue);
+            }
             upperIndex = insertPoint;
             tempSort[startValue] = toSort[startValue];
             tempIndex++;
