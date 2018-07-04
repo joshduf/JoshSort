@@ -1,6 +1,6 @@
 /*
 JoshSort:
-Own sort implementation
+Please forgive the name, it's a play on the excellent TimSort which I used as a benchmark.
 Beats Arrays.sort implementation of TimSort for objects by 30% to over 50%*
 
 Minimizes compares and moves
